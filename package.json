@@ -8,9 +8,7 @@
     "@testing-library/user-event": "^7.1.2",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
-    "react-scripts": "3.4.0",
-    "node-sass": "^4.13.1"
-
+    "react-scripts": "3.4.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -34,5 +32,6 @@
     ]
   },
   "devDependencies": {
+    "node-sass": "^4.13.1"
   }
 }
