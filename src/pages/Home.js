@@ -315,6 +315,7 @@ const Home = () => {
                   className="booking-bg-form-radio-btn"
                 />
               </div>
+              <button className="booking-bg-form-formBtn">Submit</button>
             </form>
           </div>
         </div>
