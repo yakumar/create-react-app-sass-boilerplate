@@ -1,0 +1,850 @@
+@import "../abstracts/variables";
+
+.second-section {
+  background: linear-gradient(rgba(229, 39, 97, 0.1), rgba(229, 39, 97, 0.3)),
+    url("https://cdn1.medicalnewstoday.com/content/images/hero/325/325466/325466_1100.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+
+  margin-top: -6.2rem;
+
+  padding: 5rem 5rem;
+  padding-bottom: 7rem;
+  clip-path: polygon(0 0, 39% 10%, 100% 0%, 100% 200%, -30% 120%);
+  @include mediaManager(big-desk){
+    margin-top: -15.2rem;
+    & .row{
+        
+        margin-bottom: 8rem;
+        padding-bottom: 2rem;
+        padding-right: 20rem;
+    }
+
+  }
+  @include mediaManager(tab-land){
+    margin-top: -15.2rem;
+    & .row{
+        display: flex;
+        flex-direction: column;
+        
+        margin-bottom: 8rem;
+        padding-bottom: 2rem;
+        padding-right: 10rem;
+    }
+
+  }
+  @include mediaManager(tab-port){
+    margin-top: -16.2rem;
+    padding-top: 10rem;
+    & .row{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10rem;
+        padding-bottom: 2rem;
+    }
+
+
+  }
+  @include mediaManager(phone){
+    margin-top: -16.2rem;
+    padding-top: 10rem;
+    & .row{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 8rem;
+        padding-bottom: 2rem;
+    }
+
+
+  }
+  
+    
+}
+
+.second-sec-matter {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 600;
+  max-width: 30rem;
+  padding-right: 2rem;
+  padding-bottom: 2rem;
+  height: auto;
+  @include mediaManager(tab-land){
+    max-width: 80%;
+    font-weight: 500;
+    padding-right: 1rem;
+
+
+  }
+  @include mediaManager(phone){
+    max-width: 10rem;
+    font-weight: 600;
+    padding-right: 1rem;
+
+
+  }
+}
+.second-sec-images {
+  position: relative;
+  margin-top: 2rem;
+
+}
+
+.my-image {
+  border-radius: 1rem;
+  position: absolute;
+  width: 7rem;
+  height: auto;
+  transition: ease-in-out 0.1s;
+  outline-offset: 0.7rem;
+
+  &.img1 {
+    bottom: -2rem;
+    left: 6rem;
+    z-index: 2;
+  }
+  &.img2 {
+    top: 1rem;
+    right: -12rem;
+    z-index: 0;
+  }
+  &.img3 {
+    top: -2rem;
+    right: -9rem;
+
+    z-index: 1;
+  }
+  &.img1:hover {
+    bottom: -1rem;
+    left: 7rem;
+    box-shadow: 0 0.2rem 0.8rem bisque;
+    z-index: 2;
+    outline: 0.4rem solid $secondary-color;
+  }
+  &.img2:hover {
+    bottom: -1rem;
+    right: -10rem;
+    box-shadow: 0 0.2rem 0.8rem bisque;
+    z-index: 2;
+    outline: 0.4rem solid $secondary-color;
+  }
+  &.img3:hover {
+    bottom: -1rem;
+    right: -7rem;
+    box-shadow: 0 0.2rem 0.8rem bisque;
+    z-index: 2;
+    outline: 0.4rem solid $secondary-color;
+  }
+
+  &:hover &:not(:hover) {
+    transform: scalex(0.8);
+    outline: 0.5rem solid $secondary-color;
+  }
+}
+
+.line {
+  margin: 0.7rem auto;
+  background-color: $primary-color;
+  width: 10rem;
+}
+
+.features {
+  padding: 6rem 1rem;
+  margin-top: -4rem;
+  transform: skewY(-7deg);
+
+  background: linear-gradient($third-color, $primary-color);
+  clip-path: polygon(0% 0%, 100% 9%, 100% 80%, 40% 90%, 0 100%);
+  height: 95vh;
+  .row {
+    justify-content: space-between;
+    margin-left: 6rem;
+    transform: skewY(7deg);
+  }
+
+  @include mediaManager(tab-land){
+      padding-bottom: 33rem;
+      .row{
+          
+      }
+  }
+  @include mediaManager(tab-port){
+      padding-bottom: 33rem;
+
+    .row{
+    }
+    
+    }
+    @include mediaManager(phone){
+        padding-bottom: 43rem;
+        clip-path: polygon(0% 0%, 100% 9%, 100% 80%, 40% 82%, 0 85%);
+
+
+    }
+
+}
+
+.feature-box {
+  width: 20%;
+  background-color: $third-color;
+  font-size: 1.5rem;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  margin-right: 2rem;
+
+  @include mediaManager(tab-land){
+    font-size: 1.1rem;
+
+      width: 40%;
+      margin-right: .8rem;
+      margin-right: 2rem;
+  }
+
+  @include mediaManager(tab-port){ //900
+    font-size: 1rem;
+    width: 60%;
+    margin-right: 2rem;
+    margin-left: 2rem;
+  }
+  @include mediaManager(phone){ //600
+    width: 90%;
+    margin-right: 1.5rem;
+    font-size: 1.4rem;
+    margin-left: 2rem;
+
+
+  }
+  border-radius: 0.5rem;
+  box-shadow: 0.03rem 0.2rem 0.2rem $primary-color;
+  transition: ease-in-out 0.4s;
+  font-family: "Courier New", Courier, monospace;
+  &:hover {
+    box-shadow: 0.4rem 0.4rem 0.9rem $secondary-color;
+    transform: scaleX(1.03) translateY(-1rem);
+    color: whitesmoke;
+    justify-content: center;
+  }
+}
+
+.section-price {
+  background: linear-gradient(rgba(229, 39, 97, 0.9), rgba(239, 39, 97, 0.6));
+//    clip-path: polygon(0 0, 100% -90%, 100% 100%, 0 100%);
+
+   margin-top: -12.4rem;
+
+  
+  padding: 15rem 2rem;
+  padding-bottom: 20rem;
+  height: auto;
+  @include mediaManager(phone){
+    margin-top: -17.4rem;
+
+
+  }
+
+}
+.price-cards .row{
+    margin-left: 1rem;
+    margin-right: 5rem;
+    margin-bottom: 10rem;
+//     @include mediaManager(tab-land){  
+// flex-direction: row;
+// justify-content: space-between;
+        
+
+//     }
+    @include mediaManager(tab-port){  
+        flex-direction: row;
+        justify-content: space-between;
+                
+        
+            }
+            @include mediaManager(phone){   //600px
+                flex-direction: column;
+                justify-content: space-between;
+                        
+                
+                    }
+}
+
+.price-card {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+ 
+  .card-side {
+    height: 13rem;
+    width: 10rem;
+    transition: ease-in-out 0.6s;
+    backface-visibility: hidden;
+    background-color: rgb(13, 63, 230);
+    position: relative;
+    border-radius: 0.5rem;
+    box-shadow: 0.1rem 0.15rem 0.2rem $h2-headings;
+    overflow: hidden;
+    @include mediaManager(tab-land){ //1200
+        width: 15rem;
+        height: 10rem;
+        
+        
+      
+        
+    }
+
+    &.front {
+      position: absolute;
+      background-color: rgba(229, 178, 39, 0.7);
+      z-index: 1;
+      transform: rotateY(0);
+    }
+    &.back {
+      position: absolute;
+
+      background-color: $primary-color;
+      z-index: 0;
+      transform: rotateY(180deg);
+      padding: 0.4rem 0.9rem;
+      font-family: fantasy;
+    }
+    &-front.image {
+      background-image: linear-gradient($primary-color, $third-color),
+        url("https://images.pexels.com/photos/3635300/pexels-photo-3635300.jpeg");
+      width: auto;
+      height: 7rem;
+      background-size: cover;
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+      background-blend-mode: screen;
+    }
+    &-front.image-title {
+      position: absolute;
+      top: 35%;
+      right: 15%;
+    }
+    &-front.title {
+      text-align: center;
+      font-weight: 500;
+    }
+    &-front.ul {
+      list-style: none;
+      padding: 0.1rem 1rem;
+
+      font-size: medium;
+      text-align: center;
+
+      & li {
+        padding: 0.4rem 0.9rem;
+
+        &:not(:last-child) {
+          border-bottom: 0.01rem solid rgba(0, 0, 0, 0.9);
+        }
+        &:last-child {
+          padding-bottom: 0.4rem;
+        }
+      }
+    }
+    &-back.title {
+      text-align: center;
+      text-shadow: steelblue;
+      color: rgb(241, 238, 12);
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+    }
+    &-back.link {
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: 700;
+      color: rgb(240, 37, 1);
+      text-align: center;
+      padding: 0.4rem;
+      background-color: rgb(247, 234, 212);
+      transition: ease-in-out 0.2s;
+      border-radius: 0.5rem;
+    }
+    &-back.link:hover {
+      background-color: rgb(241, 155, 6);
+      color: rgb(241, 238, 12);
+    }
+  }
+
+  &:hover .card-side.front {
+    transform: rotateY(-180deg);
+    z-index: 0;
+  }
+
+  &:hover .card-side.back {
+    transform: rotateY(0);
+    z-index: 1;
+  }
+
+  @include mediaManager(tab-land){ //1200
+    margin:0 5rem;
+    
+  .card-side {
+    height: auto;
+    width: 10rem;
+    transition: ease-in-out 0.6s;
+    backface-visibility: hidden;
+    background-color: rgb(13, 63, 230);
+    border-radius: 0.5rem;
+    box-shadow: 0.1rem 0.15rem 0.2rem $h2-headings;
+    overflow: hidden;
+    
+
+    &.front {
+      background-color: rgba(229, 178, 39, 0.7);
+      transform: rotateY(0);
+    }
+    &.back {
+
+      background-color: $primary-color;
+      transform: rotateY(0);
+      padding: 0.4rem 0.9rem;
+      font-family: fantasy;
+      margin-top: 14rem;
+
+    }
+    &-front.image {
+      background-image: linear-gradient($primary-color, $third-color),
+        url("https://images.pexels.com/photos/3635300/pexels-photo-3635300.jpeg");
+      width: auto;
+      height: 7rem;
+      background-size: cover;
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+      background-blend-mode: screen;
+    }
+    &-front.image-title {
+      position: absolute;
+      top: 35%;
+      right: 15%;
+    }
+    &-front.title {
+      text-align: center;
+      font-weight: 500;
+    }
+    &-front.ul {
+      list-style: none;
+      padding: 0.1rem 1rem;
+
+      font-size: medium;
+      text-align: center;
+
+      & li {
+        padding: 0.4rem 0.9rem;
+
+        &:not(:last-child) {
+          border-bottom: 0.01rem solid rgba(0, 0, 0, 0.9);
+        }
+        &:last-child {
+          padding-bottom: 0.4rem;
+        }
+      }
+    }
+    &-back.title {
+      text-align: center;
+      text-shadow: steelblue;
+      color: rgb(241, 238, 12);
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+    }
+    &-back.link {
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: 700;
+      color: rgb(240, 37, 1);
+      text-align: center;
+      padding: 0.4rem;
+      background-color: rgb(247, 234, 212);
+      transition: ease-in-out 0.2s;
+      border-radius: 0.5rem;
+    }
+    &-back.link:hover {
+      background-color: rgb(241, 155, 6);
+      color: rgb(241, 238, 12);
+    }
+  }
+
+  &:hover .card-side.front {
+    transform: rotateY(0);
+  }
+
+  &:hover .card-side.back {
+    transform: rotateY(0);
+  }
+
+  
+    
+}
+@include mediaManager(tab-port){ //900
+  margin:0 5.4rem;
+  .card-side {
+    height: auto;
+    width: 10rem;
+    transition: ease-in-out 0.6s;
+    backface-visibility: hidden;
+    background-color: rgb(13, 63, 230);
+    border-radius: 0.5rem;
+    box-shadow: 0.1rem 0.15rem 0.2rem $h2-headings;
+    overflow: hidden;
+    
+
+    &.front {
+      background-color: rgba(229, 178, 39, 0.7);
+      transform: rotateY(0);
+    }
+    &.back {
+
+      background-color: $primary-color;
+      transform: rotateY(0);
+      padding: 0.4rem 0.9rem;
+      font-family: fantasy;
+      margin-top: 14rem;
+
+    }
+    &-front.image {
+      background-image: linear-gradient($primary-color, $third-color),
+        url("https://images.pexels.com/photos/3635300/pexels-photo-3635300.jpeg");
+      width: auto;
+      height: 7rem;
+      background-size: cover;
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+      background-blend-mode: screen;
+    }
+    &-front.image-title {
+      position: absolute;
+      top: 35%;
+      right: 15%;
+    }
+    &-front.title {
+      text-align: center;
+      font-weight: 500;
+    }
+    &-front.ul {
+      list-style: none;
+      padding: 0.1rem 1rem;
+
+      font-size: medium;
+      text-align: center;
+
+      & li {
+        padding: 0.4rem 0.9rem;
+
+        &:not(:last-child) {
+          border-bottom: 0.01rem solid rgba(0, 0, 0, 0.9);
+        }
+        &:last-child {
+          padding-bottom: 0.4rem;
+        }
+      }
+    }
+    &-back.title {
+      text-align: center;
+      text-shadow: steelblue;
+      color: rgb(241, 238, 12);
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+    }
+    &-back.link {
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: 700;
+      color: rgb(240, 37, 1);
+      text-align: center;
+      padding: 0.4rem;
+      background-color: rgb(247, 234, 212);
+      transition: ease-in-out 0.2s;
+      border-radius: 0.5rem;
+    }
+    &-back.link:hover {
+      background-color: rgb(241, 155, 6);
+      color: rgb(241, 238, 12);
+    }
+  }
+
+  &:hover .card-side.front {
+    transform: rotateY(0);
+  }
+
+  &:hover .card-side.back {
+    transform: rotateY(0);
+  }
+
+
+
+}
+@include mediaManager(phone){ //900
+    margin:0rem 5.4rem;
+    margin-bottom: 27rem;
+
+    &:last-child{
+        margin-bottom: .3rem;
+
+    }
+    
+    .card-side {
+      height: 14rem;
+      width: 10rem;
+      transition: ease-in-out 0.6s;
+      backface-visibility: hidden;
+      background-color: rgb(13, 63, 230);
+      border-radius: 0.5rem;
+      box-shadow: 0.1rem 0.15rem 0.2rem $h2-headings;
+      overflow: hidden;
+      
+  
+      &.front {
+        background-color: rgba(229, 178, 39, 0.7);
+        transform: rotateY(0);
+      }
+      &.back {
+  
+        background-color: $primary-color;
+        transform: rotateY(0);
+        padding: 0.4rem 0.9rem;
+        font-family: fantasy;
+        margin-top: 14rem;
+        height: 12rem;
+  
+      }
+      &-front.image {
+        background-image: linear-gradient($primary-color, $third-color),
+          url("https://images.pexels.com/photos/3635300/pexels-photo-3635300.jpeg");
+        width: auto;
+        height: 6rem;
+        background-size: cover;
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        background-blend-mode: screen;
+      }
+      &-front.image-title {
+        position: absolute;
+        top: 35%;
+        right: 15%;
+      }
+      &-front.title {
+        text-align: center;
+        font-weight: 500;
+      }
+      &-front.ul {
+        list-style: none;
+        padding: 0.1rem 1rem;
+  
+        font-size: small;
+        text-align: center;
+  
+        & li {
+          padding: 0.4rem 0.9rem;
+  
+          &:not(:last-child) {
+            border-bottom: 0.01rem solid rgba(0, 0, 0, 0.9);
+          }
+          &:last-child {
+            padding-bottom: 0.4rem;
+          }
+        }
+      }
+      &-back.title {
+        text-align: center;
+        text-shadow: steelblue;
+        color: rgb(241, 238, 12);
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+      }
+      &-back.link {
+        margin: 0 1rem;
+        text-decoration: none;
+        font-weight: 400;
+        color: rgb(240, 37, 1);
+        text-align: center;
+        padding: 0.4rem;
+        background-color: rgb(247, 234, 212);
+        transition: ease-in-out 0.2s;
+        border-radius: 0.5rem;
+      }
+      &-back.link:hover {
+        background-color: rgb(241, 155, 6);
+        color: rgb(241, 238, 12);
+      }
+      
+    }
+    
+  
+    &:hover .card-side.front {
+      transform: rotateY(0);
+    }
+  
+    &:hover .card-side.back {
+      transform: rotateY(0);
+    }
+  
+  
+  
+  }
+  
+}
+//https://images.pexels.com/photos/3635300/pexels-photo-3635300.jpeg
+
+.section-testimonial {
+  background: linear-gradient(to right, $primary-color, $third-color);
+  padding: 2rem;
+
+  height: 50vh;
+  @include mediaManager(tab-land){
+    padding-bottom: 12rem;
+}
+@include mediaManager(tab-port){
+    padding-bottom: 10rem;
+}
+  @include mediaManager(phone){
+      padding-bottom: 21rem;
+  }
+}
+
+.test.title {
+  text-align: center;
+  font-weight: 800;
+}
+.test.materials {
+  transform: skewX(-12deg);
+}
+.test.testimonial {
+  margin: 0.8rem 0.7rem;
+  padding: 0.9rem 0.4rem;
+  background-color: $h2-headings;
+  color: white;
+  border-radius: 0.6rem;
+  box-shadow: 0.2rem 0.3rem 0.04rem $third-color;
+  transition: ease-in-out 0.5s;
+}
+.test.testimonial:hover {
+  box-shadow: 0.1rem 0.2rem 0.2rem rgba(229, 39, 97, 1);
+
+  .image {
+    opacity: 0.5;
+    background: $primary-color;
+    background-size: contain;
+    transform: scale(0);
+  }
+  .image-caption{
+      opacity: .7;
+      transform: translate(-5%, -20%);
+      outline: 4px solid rgba(229, 39, 97, 1);
+
+  }
+  
+}
+.test image-details {
+  position: relative;
+}
+
+.test.image {
+  transform: skewX(12deg) scale(1);
+
+
+
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  background-color: #7db9e8;
+  margin: 0 25px 5px 0;
+  float: left;
+  -webkit-shape-outside: circle(50%);
+  shape-outside: circle(50% at 50% 50%);
+
+  background-image: url("https://cdn0.iconfinder.com/data/icons/user-pictures/100/maturewoman-3-128.png");
+  background-size: cover;
+  overflow: hidden;
+  transition: ease-out 0.2s;
+  //   margin-bottom: 8rem;
+}
+
+.test.matter {
+  transform: skewX(12deg);
+
+  width: 100%;
+
+  font-size: 0.86rem;
+  font-weight: 500;
+  letter-spacing: 0.07rem;
+}
+
+.test.image-caption {
+  opacity: 0;
+  font-size: 0.9rem;
+  position: absolute;
+  top: 40%;
+  left: 4%;
+  text-align: center;
+  transform: translate(-10%, 5%);
+  transition: ease-in-out .2s;
+  backface-visibility: hidden;
+  outline-offset: 0.5rem;
+  
+}
+
+.section-booking{
+    background-color: whitesmoke;
+    padding:5rem 2rem;
+
+}
+.booking-bg{
+    background:linear-gradient(105deg,rgba($h2-headings, .8) 0%,rgba($primary-color, .8)55%, transparent 55%) ,url('https://cdn1.medicalnewstoday.com/content/images/hero/325/325466/325466_1100.jpg') ;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 2rem;
+    width: 80%;
+    margin-left: 2rem;
+    height: auto;
+}
+.booking-bg-form{
+    padding:1rem;
+    padding-top: 2rem;
+    padding-left: 3rem;
+
+    &-title{
+        margin: 1rem 0;
+        padding-left: 2rem;
+        font-size: 1.5rem;
+    }
+
+    &-d{
+        width: 50%;
+
+    }
+
+    &-input{
+        width: 100%;
+        border-radius: .3rem;
+        border: 1px solid rgba($primary-color, 1);
+        padding: .5rem;
+        display: block;
+        font-size: 0.9rem;
+        border-bottom: 0.2rem solid transparent;
+
+
+    }
+    &-input:focus{
+        outline: none;
+        border-bottom: 0.2rem solid rgba($secondary-color, 1);
+        box-shadow: 0 1rem 2rem rgba($secondary-color, .1);
+        &:invalid{
+            border-bottom: 0.2rem solid yellow;
+
+        }
+    }
+    &-label{
+        padding: 1rem;
+        margin: .9rem;
+        font-size: 1rem;
+
+    }
+    &-radio-btn{
+        border: 3px solid black;
+        border-radius: 50%;
+        &::after{
+            border: 1px solid black;
+        }
+    }
+
+}
